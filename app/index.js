@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Pressable } from 'react-native';
 import ImageViewer from '../components/ImageViewer';
+import { Link } from 'expo-router';
 
 const PlaceholderImage = require('../assets/logos/blobfish.png')
 
@@ -8,9 +9,11 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <Pressable onPress={() => alert('You pressed a button.')}>
-          <ImageViewer placeholderImageSource={PlaceholderImage} />
-        </Pressable>
+        <Link href={"/fishtank"}>
+          <Pressable>
+            <ImageViewer placeholderImageSource={PlaceholderImage} />
+          </Pressable>
+        </Link>
       </View>
       <StatusBar style="auto" />
     </View>
