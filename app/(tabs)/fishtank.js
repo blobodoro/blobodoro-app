@@ -1,7 +1,5 @@
 import { StyleSheet, View, Text } from "react-native";
-import ImageViewer from "../components/ImageViewer";
 
-const BackgroundImage = require('../assets/FishTankBackgroundTemp.jpg')
 
 export default function FishTank() {
     return (
@@ -16,7 +14,7 @@ export default function FishTank() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#001a33',
+        backgroundColor: '#ccc5b9',
         alignItems: 'center'
     },
     background: {

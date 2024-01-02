@@ -9,11 +9,11 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <Link href={"/fishtank"}>
-          <Pressable>
+        <Pressable>
+          <Link href={"/fishtank"}>
             <ImageViewer placeholderImageSource={PlaceholderImage} />
-          </Pressable>
-        </Link>
+          </Link>
+        </Pressable>
       </View>
       <StatusBar style="auto" />
     </View>
