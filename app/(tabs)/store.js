@@ -5,7 +5,7 @@ export default function Store() {
     return (
         <View style={styles.container}>
             <View style={styles.background}>
-                <Text>Store</Text>
+                <Text>This is the Store</Text>
             </View>
         </View>
     )
