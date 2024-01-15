@@ -5,7 +5,7 @@ export default function Stats() {
     return (
         <View style={styles.container}>
             <View style={styles.background}>
-                <Text>Stats</Text>
+                <Text>This is the Stats</Text>
             </View>
         </View>
     )
