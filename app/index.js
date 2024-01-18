@@ -1,33 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Pressable } from 'react-native';
-import ImageViewer from '../components/ImageViewer';
-import { Link } from 'expo-router';
+import { ActivityIndicator, View } from 'react-native';
 
-const PlaceholderImage = require('../assets/logos/blobfish.png')
-
-export default function App() {
+const StartPage = () => {
   return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Pressable>
-          <Link href={"/fishtank"}>
-            <ImageViewer placeholderImageSource={PlaceholderImage} />
-          </Link>
-        </Pressable>
-      </View>
-      <StatusBar style="auto" />
+    <View style={{ flex: 1, justifyContent: 'center' }}>
+      <ActivityIndicator size="large" color="#0000ff" />
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#001a33',
-    alignItems: 'center',
-  },
-  imageContainer: {
-    flex: 1,
-    paddingTop: 58,
-  },
-});
+export default StartPage;

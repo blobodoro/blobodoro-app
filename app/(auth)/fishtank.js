@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { StyleSheet, View, ImageBackground, Animated, Easing, Dimensions } from 'react-native';
+import { StyleSheet, View, ImageBackground, Animated, Easing, Dimensions, Text } from 'react-native';
+import { useUser } from '@clerk/clerk-expo';
 
 const FishTank = () => {
   const fish1Position = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
   const fish2Position = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
+  const { user } = useUser();
 
   useEffect(() => {
     const animateFish = (position) => {
@@ -42,6 +44,10 @@ const FishTank = () => {
         resizeMode="cover"
       >
         {/* Add other content/components related to the aquarium here */}
+        
+        {/* welcome signed in user with their email. */}
+        <Text> Welcome, {user?.emailAddresses[0]?.emailAddress}! </Text>  
+        
         <Animated.Image
           source={require('./images/fish1.gif')}
           style={[
