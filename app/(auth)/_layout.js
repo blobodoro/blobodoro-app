@@ -28,7 +28,7 @@ const TabsLayout = () => {
         name="stats"
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="ios-stats-chart" size={size} color={color} />
+            <Ionicons name="bar-chart" size={size} color={color} />
           ),
         }}
       />
@@ -36,7 +36,7 @@ const TabsLayout = () => {
         name="fishtank"
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="ios-heart" size={size} color={color} />
+            <Ionicons name="fish" size={size} color={color} />
           ),
           headerRight: () => isSignedIn ? <LogoutButton /> : null,
         }}
@@ -45,7 +45,7 @@ const TabsLayout = () => {
         name="store"
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="ios-basket" size={size} color={color} />
+            <Ionicons name="cart" size={size} color={color} />
           ),
           
         }}
